@@ -25,11 +25,25 @@ function updateImage(){
     images.height = '50'
 }
 
+const buttonContainer = document.querySelector('.button-container')
+function changeBGGreen(e){
+    if(e.target.tagName === 'BUTTON'){
+    e.target.classList.add('greenBG');
+    }
+    e.stopPropagation
+}
+
+function colorChange(e){
+        e.target.style.color = e.target.textContent;
+}
+
 
 // clickButton.addEventListener('click', clickme, {once:true});
 // clickButton.addEventListener('click', changeBGPink);
 // clickButton.addEventListener('click', clickme1 );
-clickButton.addEventListener('click', updateImage)
+// clickButton.addEventListener('click', updateImage);
+// buttonContainer.addEventListener('mouseover', changeBGGreen);
+buttonContainer.addEventListener('mouseover', colorChange);
 
 
 
